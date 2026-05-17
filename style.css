@@ -89,18 +89,28 @@ body {
 .navbar ul li a:hover::after {
   width: 100%;
 }
+
+
 /* section */
 
 .section {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
 }
 
+.left,
+.right{
+  flex:1;
+}
 .left {
   width: 60%;
-  /* background-color: blue; */
   padding: 11%;
 }
+
 .left h1 {
   font-size: 50px;
   color: white;
@@ -118,15 +128,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 50px; */
 }
 
 .right img {
   border-radius: 1rem;
-  /* width: 100%;
-  height: auto; */
-  height: 450px;
-  width: 450px;
+  width: 100%;
+  height: auto;
+  /* height: 450px;
+  width: 450px; */
   margin-top: 70px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -135,7 +144,6 @@ body {
 .right img:hover {
   transform: scale(1.01);
 }
-/* manu toggle */
 
 /* Button */
 .btn {
@@ -168,17 +176,25 @@ body {
 }
 
 /* About */
+
 #about h1 {
   color: white;
   text-align: center;
   font-size: 40px;
   color: #3333cc;
 }
+
+.aboutleft,
+.aboutright{
+  flex:1;
+}
 .aboutsection {
   color: white;
   display: flex;
-  justify-content: space-evenly;
-  margin: 50px 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
 }
 .aboutleft {
   display: flex;
@@ -187,6 +203,8 @@ body {
 .aboutleft #img {
   height: 400px;
   width: 400px;
+  /* width: 100%;
+  height: auto; */
   border-radius: 1rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -212,7 +230,16 @@ body {
   color: gray;
 
 }
+
 /* skills */
+
+.skills {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+}
 .skillssection {
   display: flex;
   justify-content: space-evenly;
@@ -242,6 +269,9 @@ body {
   margin: 100px 0;
   height: 350px;
   width: 500px;
+
+  /* width: 100%;
+  height: auto; */
   border-radius: 1rem;
   background-size: cover;
   transition: 0.3s;
@@ -313,19 +343,26 @@ body {
   font-size: 40px;
 }
 .sectionProject {
-  display: flex;
+  /* display: flex;
   justify-content: space-evenly;
   gap: 10px;
   margin: 50px 0;
-  padding: 0 100px 0;
+  padding: 0 100px 0; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
 }
 .sectionProject .Project1 {
   height: 400px;
   width: 30%;
 }
 .Project1 img {
+  width: 400px;
   height: 400px;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 1rem;
   transition: 0.3s;
 }
@@ -345,7 +382,6 @@ form {
   width: 400px; */
   /* padding: 50%; */
   margin: 30px 0 0 36%;
-
 }
 
 form {
@@ -445,5 +481,44 @@ button:hover {
   }
   #navLinks.active {
     display: flex;
+  }
+
+  .left {
+    flex-direction: column;
+  }
+
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutsection {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skillssection {
+    flex-direction: column;
+    text-align: center;
+  }
+  .Project1 {
+    display: flex;
+    justify-content: center;
+  }
+  .sectionProject {
+     flex-direction: column;
+     margin-top: 20px;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  #conatctForm {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 270px;
+    /* width: 350px; */
   }
 }
