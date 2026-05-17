@@ -39,11 +39,7 @@ A modern and responsive personal portfolio website built using HTML, CSS, and Ja
 
 ## 🌐 Live Demo
 
-(Add your Netlify/Vercel link here)
-
-Example:
-https://yourportfolio.netlify.app
-
+https://app.netlify.com/projects/suraj-portfol/overview
 ---
 
 ## 📸 Screenshot
