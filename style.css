@@ -6,7 +6,9 @@
 }
 .navbar {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  padding: 15px 30px;
   height: 60px;
   width: 100%;
   align-items: center;
@@ -15,6 +17,30 @@
   color: white;
   position: fixed;
 }
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  transition:0.3s;
+
+}
+
+.logo{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
 .navbar ul {
   color: white;
   display: flex;
@@ -110,12 +136,6 @@ body {
   transform: scale(1.01);
 }
 /* manu toggle */
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
 
 /* Button */
 .btn {
@@ -389,31 +409,41 @@ button:hover {
 
 
 @media (max-width: 768px) {
-  img {
-    flex-direction: column;
-  }
-  .nav-Links {
-    display: none;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    width: 100%;
-    background-color: #0a0f2c;
-    flex-direction: column;
-    /* align-items: center; */
-  }
-  .nav-Links.active {
-    display: flex;
-    margin-bottom: -5px;
-  }
-  #menuToggle {
+  .menu-btn{
     display: block;
-    cursor: pointer;
-    font-size: 25px;
   }
 
-  .aboutleft {
-    display: flex;
+  .navbar {
+    /* flex-direction: column; */
+  }
+  .logo{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: black;
+    width: 100%;
     flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+
+  }
+
+  #navLinks {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: black;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+    background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+
+  }
+  #navLinks.active {
+    display: flex;
   }
 }
