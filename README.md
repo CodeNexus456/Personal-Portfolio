@@ -47,12 +47,15 @@ https://yourportfolio.netlify.app
 ---
 
 ## 📸 Screenshot
+![Screenshot 1](image/img-1.png)
 
-![Portfolio Screenshot](image/.img-1.png);
-![Portfolio Screenshot](image/.img-2.png);
-![Portfolio Screenshot](image/.img-3.png);
-![Portfolio Screenshot](image/.img-4.png);
-![Portfolio Screenshot](image/.img-5.png);
+![Screenshot 2](image/img-2.png)
+
+![Screenshot 3](image/img-3.png)
+
+![Screenshot 3](image/img-4.png)
+
+![Screenshot 3](image/img-5.png)
 
 ---
 
