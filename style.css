@@ -457,28 +457,32 @@ button:hover {
   .logo{
     position: absolute;
     top: 70px;
-    right: 0;
-    background-color: black;
+    left: 0;
+    /* background-color: black; */
+
     width: 100%;
     flex-direction: column;
     text-align: center;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     display: none;
+
 
   }
 
   #navLinks {
     position: absolute;
     top: 70px;
-    right: 0;
+    left: 0;
     background-color: black;
-    width: 100%;
+    width: 100px;
     flex-direction: column;
     text-align: center;
     padding: 20px 0;
     display: none;
-    background:rgba(0,0,0,0.5);
+    margin-right: 50px;
+    background:rgba(0,0,0,0.1);
   backdrop-filter:blur(10px);
+  border-radius: 0 1rem 1rem 0;
 
   }
   #navLinks.active {
