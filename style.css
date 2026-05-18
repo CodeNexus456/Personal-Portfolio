@@ -518,4 +518,9 @@ button:hover {
   #conatctForm {
     flex-direction: column;
   }
+
+  .right {
+    display: flex;
+    justify-content: center;
+  }
 }
