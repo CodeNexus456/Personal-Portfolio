@@ -400,6 +400,12 @@ body {
   margin-top: 10px;
 }
 
+.nav-btn2 a {
+  text-decoration: none;
+  border-radius: 1.5rem;
+  color: rgba(0, 0, 255, 0.696);
+}
+
 .nav-btn2 .btn-demo {
   height: 40px;
   width: 170px;
@@ -420,7 +426,7 @@ body {
   border-radius: 1.5rem;
   border: 2px solid blue;
   cursor: pointer;
-  color: rgba(0, 0, 255, 0.696);
+  /* color: rgba(0, 0, 255, 0.696); */
   transition: 0.2s;
 }
 
