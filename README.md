@@ -29,17 +29,19 @@ A modern and responsive personal portfolio website built using HTML, CSS, and Ja
 
 ## 📂 Projects Included
 
-- 🌦 Weather App
 - 🎬 Advance Digital Clock
+- 🌦 Weather App
 - 🧮 Responsive Project
-- 📋 Rnadom Password generator
-- ▶️ Temprature Converter
+- 📋 E-commerce website
+- ▶️ Calculator
+- 🧮 Student Productivity Ecosystem website
+- 🎬 Music Website
 
 ---
 
 ## 🌐 Live Demo
 
-https://app.netlify.com/projects/suraj-portfol/overview
+https://personal-portfolio-lac-seven-18.vercel.app/
 ---
 
 ## 📸 Screenshot
@@ -57,7 +59,7 @@ https://app.netlify.com/projects/suraj-portfol/overview
 
 ## 📫 Contact
 
-- GitHub: https://github.com/Suraj1234-wq
+- GitHub: https://github.com/CodeNexus456
 - LinkedIn: https://www.linkedin.com/in/suraj-kumar-7a104032b/
 - Email: ksurajkumar336@gmail.com
 
