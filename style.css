@@ -227,9 +227,8 @@ body {
 
 /* skills */
 
-
 input[type="range"] {
-    width: 350px;
+    width: 450px;
     height: 10px;
     display: inline-block;
     cursor: pointer;
@@ -240,11 +239,6 @@ input[type="range"] {
     outline: none;
 }
 
-.js-input {
-  display: flex;
-  justify-content: center;
-  margin-left: 100px;
-}
 
 .nav-skills {
   display: flex;
@@ -256,22 +250,20 @@ input[type="range"] {
 .skills-input {
   display: flex;
   align-items: center;
+  justify-content: left;
   gap: 50px;
 }
 
-.skills {
-   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  gap: 40px;
-  padding: 100px;
-
+#skills {
+  margin-top: 40px;
 }
+
 .skillssection {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
+
 #skills h1 {
   text-align: center;
   color: #3333cc;
