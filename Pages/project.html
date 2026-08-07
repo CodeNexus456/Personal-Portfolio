@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Suraj Kumar</title>
+<!-- Google Font: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../Css/project.css">
+<!-- Font Awesome for UI icons (buttons, badges) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Devicon for technology stack badges -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+
+
+     <!-- PROJECTS SECTION -->
+
+<section class="projects-section" id="projects" aria-labelledby="projects-heading">
+
+  <!-- Background layers -->
+  <div class="grid-pattern" aria-hidden="true"></div>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <!-- Heading -->
+  <div class="section-heading">
+    <span class="eyebrow">MY WORK</span>
+    <h2 id="projects-heading">MY <span class="gradient-text">PROJECTS</span></h2>
+    <p>Here are some of the projects I've built to improve my skills in Frontend, Backend, APIs, and Full Stack Development.</p>
+  </div>
+
+  <!-- Filter navigation -->
+  <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+    <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
+    <button class="filter-btn" role="tab" aria-selected="false" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" role="tab" aria-selected="false" data-filter="backend">Backend</button>
+    <button class="filter-btn" role="tab" aria-selected="false" data-filter="fullstack">Full Stack</button>
+    <button class="filter-btn" role="tab" aria-selected="false" data-filter="api">API</button>
+    <button class="filter-btn" role="tab" aria-selected="false" data-filter="react">React</button>
+  </div>
+
+  <!-- Projects grid -->
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- 1. Weather App -->
+    <article class="project-card" data-category="frontend api" tabindex="0">
+      <div class="card-media">
+        <span class="category-badge">Frontend + API</span>
+        <img src="https://cdn.dribbble.com/userupload/47117854/file/309302acb30f738bff280e1ecb6a0fc0.png?resize=2048x1536&vertical=center" alt="Weather App screenshot" loading="lazy">
+        <div class="card-overlay"><span class="overlay-text">Live weather with 7-day forecast, searchable by city.</span></div>
+      </div>
+      <div class="card-body">
+        <h3 class="project-title">Weather App</h3>
+        <p class="project-desc">A responsive weather dashboard with live conditions and a 7-day forecast powered by a public Weather API.</p>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="devicon-html5-plain colored"></i>HTML</span>
+          <span class="tech-badge"><i class="devicon-css3-plain colored"></i>CSS</span>
+          <span class="tech-badge"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+          <span class="tech-badge"><i class="fa-solid fa-cloud-sun" style="color:#7C74F5;"></i>Weather API</span>
+        </div>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i>Live Weather</li>
+          <li><i class="fa-solid fa-check"></i>7-Day Forecast</li>
+          <li><i class="fa-solid fa-check"></i>Search by City</li>
+          <li><i class="fa-solid fa-check"></i>Responsive Design</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" aria-label="View Live Demo of Weather App"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://weather-app-chi-beige-14.vercel.app/">View Live</a></button>
+
+          <button class="btn btn-outline" aria-label="View Source Code of Weather App"><i class="fa-brands fa-github"></i><a href="https://github.com/CodeNexus456/weather-App-">Source Code</a></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. E-Commerce Website -->
+    <article class="project-card" data-category="fullstack backend" tabindex="0">
+      <div class="card-media">
+        <span class="category-badge">Full Stack</span>
+        <img src="../image/e - commerce.png" alt="E-Commerce website screenshot" loading="lazy">
+        <div class="card-overlay"><span class="overlay-text">Full shopping experience with cart, auth, and payments.</span></div>
+      </div>
+      <div class="card-body">
+        <h3 class="project-title">E-Commerce Website</h3>
+        <p class="project-desc">A full stack online store with product listings, cart management, secure authentication, and payment-ready checkout.</p>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="devicon-html5-plain colored"></i>HTML</span>
+          <span class="tech-badge"><i class="devicon-css3-plain colored"></i>CSS</span>
+          <span class="tech-badge"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+          <span class="tech-badge"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+          <span class="tech-badge"><i class="devicon-express-original colored"></i>Express.js</span>
+          <span class="tech-badge"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+        </div>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i>Product Listing</li>
+          <li><i class="fa-solid fa-check"></i>Shopping Cart</li>
+          <li><i class="fa-solid fa-check"></i>Authentication</li>
+          <li><i class="fa-solid fa-check"></i>Payment Ready</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" aria-label="View Live Demo of E-Commerce Website"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://e-commerce-landing-website.vercel.app/">View Live</a></button>
+          <button class="btn btn-outline" aria-label="View Source Code of E-Commerce Website"><i class="fa-brands fa-github"></i> <a href="https://github.com/CodeNexus456/E-Commerce-Landing-Website">Source Code</a></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Space Dashboard -->
+    <article class="project-card" data-category="api frontend" tabindex="0">
+      <div class="card-media">
+        <span class="category-badge">API Project</span>
+        <img src="../image/space .png" alt="Space Dashboard screenshot" loading="lazy">
+        <div class="card-overlay"><span class="overlay-text">NASA imagery, live ISS tracking, and rocket launch data.</span></div>
+      </div>
+      <div class="card-body">
+        <h3 class="project-title">Space Dashboard</h3>
+        <p class="project-desc">An interactive dashboard aggregating NASA's picture of the day, live ISS position, and upcoming rocket launches.</p>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="fa-solid fa-rocket" style="color:#7C74F5;"></i>NASA API</span>
+          <span class="tech-badge"><i class="fa-solid fa-satellite" style="color:#7C74F5;"></i>SpaceX API</span>
+          <span class="tech-badge"><i class="fa-solid fa-globe" style="color:#7C74F5;"></i>ISS API</span>
+          <span class="tech-badge"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+        </div>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i>NASA APOD</li>
+          <li><i class="fa-solid fa-check"></i>ISS Live Tracker</li>
+          <li><i class="fa-solid fa-check"></i>Rocket Launches</li>
+          <li><i class="fa-solid fa-check"></i>Space News</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" aria-label="View Live Demo of Space Dashboard"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://space-dashboard-psi.vercel.app/">View Live</a></button>
+          <button class="btn btn-outline" aria-label="View Source Code of Space Dashboard"><i class="fa-brands fa-github"></i><a href="https://github.com/CodeNexus456/Space-Dashboard.git">Source Code</a></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Country Explorer -->
+    <article class="project-card" data-category="api frontend" tabindex="0">
+      <div class="card-media">
+        <span class="category-badge">REST API</span>
+        <img src="../image/country explorer.png" alt="Country Explorer screenshot" loading="lazy">
+        <div class="card-overlay"><span class="overlay-text">Explore countries by population, currency, and flags.</span></div>
+      </div>
+      <div class="card-body">
+        <h3 class="project-title">Country Explorer</h3>
+        <p class="project-desc">A searchable explorer showing population, currency, region, and flags for every country using a REST countries API.</p>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+          <span class="tech-badge"><i class="fa-solid fa-earth-americas" style="color:#7C74F5;"></i>REST Countries API</span>
+        </div>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i>Search Country</li>
+          <li><i class="fa-solid fa-check"></i>Population</li>
+          <li><i class="fa-solid fa-check"></i>Currency</li>
+          <li><i class="fa-solid fa-check"></i>Maps &amp; Flags</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" aria-label="View Live Demo of Country Explorer"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://country-explorer-three-lyart.vercel.app/">View Live</a></button>
+          <button class="btn btn-outline" aria-label="View Source Code of Country Explorer"><i class="fa-brands fa-github"></i><a href="https://github.com/CodeNexus456/Country-Explorer.git">Source Code</a></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Movie Explorer -->
+    <article class="project-card" data-category="api frontend react" tabindex="0">
+      <div class="card-media">
+        <span class="category-badge">API Project</span>
+        <img src="../image/movie explorer.png" alt="Movie Explorer screenshot" loading="lazy">
+        <div class="card-overlay"><span class="overlay-text">Browse trending movies, ratings, and trailers.</span></div>
+      </div>
+      <div class="card-body">
+        <h3 class="project-title">Movie Explorer</h3>
+        <p class="project-desc">A movie discovery app showcasing trending titles, ratings, trailers, and genre-based browsing via the TMDB API.</p>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+          <span class="tech-badge"><i class="fa-solid fa-film" style="color:#7C74F5;"></i>TMDB API</span>
+        </div>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i>Trending Movies</li>
+          <li><i class="fa-solid fa-check"></i>Search</li>
+          <li><i class="fa-solid fa-check"></i>Ratings &amp; Trailers</li>
+          <li><i class="fa-solid fa-check"></i>Categories</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" aria-label="View Live Demo of Movie Explorer"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://movie-explorer-pearl-five.vercel.app/">View Live</a></button>
+          <button class="btn btn-outline" aria-label="View Source Code of Movie Explorer"><i class="fa-brands fa-github"></i><a href="https://github.com/CodeNexus456/Movie-Explorer.git">Source Code</a></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Personal Portfolio -->
+    <article class="project-card" data-category="frontend" tabindex="0">
+      <div class="card-media">
+        <span class="category-badge">Portfolio</span>
+        <img src="https://placehold.co/600x375/141b3d/7C74F5?text=Personal+Portfolio" alt="Personal Portfolio screenshot" loading="lazy">
+        <div class="card-overlay"><span class="overlay-text">A dark-themed portfolio with smooth animations.</span></div>
+      </div>
+      <div class="card-body">
+        <h3 class="project-title">Personal Portfolio</h3>
+        <p class="project-desc">This very portfolio — a dark-themed, fully responsive site with scroll animations and a working contact form.</p>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="devicon-html5-plain colored"></i>HTML</span>
+          <span class="tech-badge"><i class="devicon-css3-plain colored"></i>CSS</span>
+          <span class="tech-badge"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+        </div>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i>Responsive</li>
+          <li><i class="fa-solid fa-check"></i>Dark Theme</li>
+          <li><i class="fa-solid fa-check"></i>Animations</li>
+          <li><i class="fa-solid fa-check"></i>Contact Form</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" aria-label="View Live Demo of Personal Portfolio"><i class="fa-solid fa-arrow-up-right-from-square"></i>View Live</button>
+          <button class="btn btn-outline" aria-label="View Source Code of Personal Portfolio"><i class="fa-brands fa-github"></i>Source Code</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============================================================
+       STATISTICS SECTION
+  ============================================================ -->
+  <div class="stats-wrap">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-emoji" aria-hidden="true">🚀</div>
+        <div class="stat-number" data-target="20">0</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-emoji" aria-hidden="true">💼</div>
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Full Stack Projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-emoji" aria-hidden="true">🌐</div>
+        <div class="stat-number" data-target="10">0</div>
+        <div class="stat-label">API Integrations</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-emoji" aria-hidden="true">⭐</div>
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Responsive Designs</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script src="../js/project.js"></script>
+</body>
+</html>
