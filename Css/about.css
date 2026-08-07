@@ -262,10 +262,15 @@
     align-items: center;
     gap: 8px;
   }
+
   .btn-primary{
     background: linear-gradient(90deg, var(--accent), var(--accent-light));
     color: #fff;
     box-shadow: 0 8px 24px var(--accent-glow);
+  }
+  .btn-primary a {
+    text-decoration: none;
+    color: white;
   }
   .btn-primary:hover{
     transform: translateY(-3px);
