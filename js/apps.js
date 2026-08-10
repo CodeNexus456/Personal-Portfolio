@@ -172,7 +172,7 @@
     }, {threshold:.5});
     counters.forEach(c => cIo.observe(c));
   }
-
+ 
   /* ---------- back to top ---------- */
   const backToTop = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {
@@ -181,5 +181,5 @@
   backToTop.addEventListener('click', () => {
     window.scrollTo({top:0, behavior: reduceMotion ? 'auto' : 'smooth'});
   });
-
+ 
 })();
