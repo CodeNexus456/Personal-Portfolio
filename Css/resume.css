@@ -1,172 +1,267 @@
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #e8e8e8;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 20px;
-      min-height: 100vh;
-    }
+  /* ============================================================
+     CENTRAL CONFIG NOTES
+     All resume copy lives in the markup below, grouped by the
+     same section order as the visible page (Header, Experience,
+     Education, Projects, Skills, Achievements, Footer). To tailor
+     this resume to a specific job description, edit the text
+     inside the matching <section> tag — nothing else needs to
+     change. Class names / structure should stay as-is so the
+     print and ATS rules keep working.
+     ============================================================ */
 
-    .download-btn {
-      margin-bottom: 18px;
-      padding: 10px 28px;
-      background: #00bcd4;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 15px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,188,212,0.3);
-      transition: background 0.2s;
-    }
-    .download-btn:hover { background: #0097a7; }
+  :root{
+    --ink:#1c1c1c;
+    --ink-soft:#3a3a3a;
+    --muted:#5c5c5c;
+    --heading:#1a5f7a;   /* blue/teal section heading */
+    --rule:#c9d2d6;
+    --rule-strong:#9fb0b6;
+    --page-bg:#f2f4f5;
+    --paper:#ffffff;
+    --link:#155c74;
+  }
 
-    .resume {
-      background: #fff;
-      width: 794px;
-      min-height: 1123px;
-      padding: 38px 44px 40px 44px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-    }
+  *{ box-sizing:border-box; }
 
-    /* ── HEADER ── */
-    .header { text-align: center; margin-bottom: 14px; }
-    .header h1 {
-      font-size: 26px;
-      font-weight: 700;
-      color: #1a1a1a;
-      letter-spacing: 0.5px;
-    }
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--page-bg);
+    color:var(--ink);
+    font-family:Calibri, "Segoe UI", Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
 
-    .contact i {
-      color: black;
-      font-size: 15px;
-    }
-    .header .subtitle {
-      font-size: 11.5px;
-      color: #333;
-      margin: 4px 0 8px;
-    }
-    .header .contact {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 11px;
-      color: #333;
-    }
-    .header .contact span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .header .contact a { color: #00bcd4; text-decoration: none; }
+  /* ---------- on-screen chrome (not printed) ---------- */
+  .toolbar{
+    max-width:794px;
+    margin:20px auto 0 auto;
+    padding:0 16px;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+  }
 
-    /* ── SECTION ── */
-    .section { margin-top: 16px; }
-    .section-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: #00bcd4;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      border-bottom: 1.5px solid #00bcd4;
-      padding-bottom: 3px;
-      margin-bottom: 10px;
-    }
+  .btn{
+    font-family:inherit;
+    font-size:13.5px;
+    font-weight:600;
+    padding:9px 16px;
+    border-radius:6px;
+    cursor:pointer;
+    border:1px solid var(--heading);
+    background:var(--heading);
+    color:#fff;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    transition:opacity .15s ease, transform .1s ease;
+  }
+  .btn:hover{ opacity:.9; }
+  .btn:active{ transform:translateY(1px); }
+  .btn.secondary{
+    background:#fff;
+    color:var(--heading);
+  }
+  .btn:focus-visible{
+    outline:2px solid var(--heading);
+    outline-offset:2px;
+  }
 
-    /* ── WORK EXPERIENCE ── */
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .company-name { font-size: 13px; font-weight: 700; color: #111; }
-    .job-title { font-size: 11.5px; color: #333; margin-top: 1px; }
-    .date { font-size: 11px; color: #555; white-space: nowrap; }
-    .bullet-list { margin-top: 6px; padding-left: 16px; }
-    .bullet-list li {
-      font-size: 11.2px;
-      color: #222;
-      line-height: 1.55;
-      margin-bottom: 3px;
-    }
-    .bullet-list li b { font-weight: 700; }
+  .page-outer{
+    padding:16px 16px 48px 16px;
+    display:flex;
+    justify-content:center;
+  }
 
-    /* ── EDUCATION ── */
-    .edu-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .edu-name { font-size: 13px; font-weight: 700; color: #111; }
-    .edu-degree { font-size: 11.5px; color: #333; margin-top: 2px; }
+  /* ---------- the resume "paper" ---------- */
+  .resume{
+    width:100%;
+    max-width:794px;
+    min-height:1123px;
+    background:var(--paper);
+    box-shadow:0 1px 4px rgba(0,0,0,0.08), 0 6px 20px rgba(0,0,0,0.08);
+    padding:40px 46px 34px 46px;
+  }
 
-    /* ── PROJECT ── */
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .project-name { font-size: 13px; font-weight: 700; color: #111; }
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      margin-left: 5px;
-      color: #00bcd4;
-      font-size: 11px;
-    }
+  /* ---------- header ---------- */
+  .r-header{
+    text-align:center;
+    margin-bottom:14px;
+  }
+  .r-name{
+    font-size:27px;
+    font-weight:700;
+    letter-spacing:0.3px;
+    color:var(--ink);
+    margin:0 0 3px 0;
+  }
+  .r-title-line{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0 0 6px 0;
+  }
+  .r-title-line .sep{ color:var(--muted); margin:0 6px; }
 
-    .project-link a{
-      text-decoration: none;
-    }
-    .project-desc { font-size: 11.2px; color: #222; margin-top: 3px; line-height: 1.5; }
+  .r-contact{
+    font-size:12px;
+    color:var(--muted);
+  }
+  .r-contact a{
+    color:var(--link);
+    text-decoration:none;
+  }
+  .r-contact a:hover{ text-decoration:underline; }
+  .r-contact .sep{ color:#b5b5b5; margin:0 7px; }
 
-    /* ── SKILLS ── */
-    .skills-list { padding-left: 16px; }
-    .skills-list li {
-      font-size: 11.2px;
-      color: #222;
-      line-height: 1.6;
-      margin-bottom: 2px;
-    }
-    .skills-list li b { font-weight: 700; }
+  /* ---------- section heading ---------- */
+  h2.r-heading{
+    font-size:12.5px;
+    letter-spacing:1.1px;
+    font-weight:700;
+    color:var(--heading);
+    text-transform:uppercase;
+    margin:14px 0 3px 0;
+  }
+  .r-rule{
+    border:none;
+    border-top:1.4px solid var(--rule-strong);
+    margin:0 0 8px 0;
+  }
 
-    /* ── ACHIEVEMENT ── */
-    .achievement-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: #00bcd4;
-      margin-bottom: 5px;
-    }
+  section.r-section{ margin-top:2px; }
+  section.r-section:first-of-type h2.r-heading{ margin-top:8px; }
 
-    @media print {
-      body { background: #fff; padding: 0; }
-      .download-btn { display: none; }
-      .resume { box-shadow: none; width: 100%; }
-    }
-  
-    /* Print styles for clean PDF  */
+  /* ---------- entries (experience / projects) ---------- */
+  .entry{ margin-bottom:9px; }
+  .entry:last-child{ margin-bottom:0; }
 
-     @page {
-      size: A4;
-      margin: 0;
+  .entry-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+  }
+  .entry-title{
+    font-weight:700;
+    font-size:13px;
+    color:var(--ink);
+  }
+  .entry-title a{
+    color:var(--ink);
+    text-decoration:none;
+    font-weight:700;
+  }
+  .entry-title a:hover{ text-decoration:underline; }
+  .entry-link-icon{
+    font-size:11px;
+    color:var(--link);
+    text-decoration:none;
+    margin-left:3px;
+  }
+  .entry-date{
+    font-size:12px;
+    color:var(--muted);
+    white-space:nowrap;
+    font-style:italic;
+  }
+  .entry-subtitle{
+    font-size:12.5px;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:1px 0 4px 0;
+  }
+
+  ul.r-bullets{
+    margin:0;
+    padding-left:16px;
+  }
+  ul.r-bullets li{
+    font-size:12.3px;
+    line-height:1.42;
+    color:var(--ink-soft);
+    margin-bottom:2px;
+  }
+  ul.r-bullets li:last-child{ margin-bottom:0; }
+  ul.r-bullets li b, ul.r-bullets li strong{ color:var(--ink); font-weight:700; }
+
+  .tech-line{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  .tech-line b{ color:var(--ink-soft); }
+
+  /* ---------- education ---------- */
+  .edu-degree{
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- skills ---------- */
+  .skills-list{ margin:0; padding:0; list-style:none; }
+  .skills-list li{
+    font-size:12.3px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    margin-bottom:1px;
+  }
+  .skills-list li b{ color:var(--ink); font-weight:700; }
+
+  /* ---------- achievements ---------- */
+  ul.r-bullets.achievements li{ margin-bottom:3px; }
+
+  /* ---------- footer ---------- */
+  .r-footer{
+    margin-top:16px;
+    padding-top:8px;
+    border-top:1px solid var(--rule);
+    text-align:center;
+    font-size:11px;
+    color:#8a8a8a;
+  }
+  .r-footer a{ color:#8a8a8a; text-decoration:none; }
+  .r-footer a:hover{ text-decoration:underline; }
+  .r-footer .sep{ margin:0 6px; color:#c2c2c2; }
+
+  /* ---------- responsive (screen only) ---------- */
+  @media (max-width: 860px){
+    .toolbar{ justify-content:center; }
+  }
+  @media (max-width: 560px){
+    .resume{ padding:26px 20px 22px 20px; min-height:0; }
+    .r-name{ font-size:22px; }
+    .entry-row{ flex-direction:column; align-items:flex-start; gap:1px; }
+    .entry-date{ order:2; }
+    .r-contact .sep{ display:inline-block; }
+  }
+
+  /* ---------- print rules ---------- */
+  @page{
+    size: A4;
+    margin: 0;
+  }
+  @media print{
+    html,body{
+      background:#fff;
     }
-    @media print {
-      html, body {
-        width: 794px;
-        height: 1123px;
-        background: #fff !important;
-      }
-      .resume {
-        width: 794px !important;
-        box-shadow: none !important;
-        padding: 38px 44px !important;
-      }
+    .toolbar, .no-print{
+      display:none !important;
     }
+    .page-outer{
+      padding:0;
+      display:block;
+    }
+    .resume{
+      box-shadow:none;
+      max-width:none;
+      width:210mm;
+      min-height:297mm;
+      margin:0;
+      padding:14mm 16mm 12mm 16mm;
+    }
+    a{ color:inherit !important; }
+    * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
