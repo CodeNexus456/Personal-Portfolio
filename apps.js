@@ -25,10 +25,21 @@ btn.addEventListener("click", () => {
   } catch (e) {}
 });
 
-// contact form -> validate, then open mail client with prefilled message
+// contact form -> send directly via EmailJS (no mail app needed)
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
-const RECEIVER_EMAIL = "ksurajkumar336@gmail.com";
+const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+// EmailJS setup — your account's public key, service ID and template ID
+(function () {
+  try {
+    emailjs.init("4uNB190iSrEY1qN_U");
+  } catch (e) {
+    console.warn("EmailJS failed to init", e);
+  }
+})();
+const EMAILJS_SERVICE_ID = "service_gtan7tc";
+const EMAILJS_TEMPLATE_ID = "template_uy1k4ps";
 
 function setFieldError(id, message) {
   const row = document.getElementById(id).closest(".form-row");
@@ -87,15 +98,33 @@ contactForm.addEventListener("submit", function (e) {
     return;
   }
 
-  const subject = encodeURIComponent(`Portfolio contact — ${reason} — ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nReason: ${reason}\n\nMessage:\n${message}`
-  );
-  window.location.href = `mailto:${RECEIVER_EMAIL}?subject=${subject}&body=${body}`;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
 
-  formStatus.textContent = "Opening your email app to send this message...";
-  formStatus.classList.add("ok");
-  contactForm.reset();
+  emailjs
+    .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      name: name,
+      email: email,
+      reason: reason,
+      message: message,
+    })
+    .then(function () {
+      formStatus.textContent =
+        "Message sent — thanks! I'll get back to you soon.";
+      formStatus.classList.add("ok");
+      contactForm.reset();
+    })
+    .catch(function () {
+      formStatus.textContent =
+        "Something went wrong — please try again, or email me directly.";
+      formStatus.classList.add("bad");
+    })
+    .finally(function () {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    });
 });
 
 // mobile menu toggle

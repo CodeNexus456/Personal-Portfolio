@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="apps.js">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
 <body>
@@ -28,7 +29,7 @@
       <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
       </button>
-      <a class="resume-btn" href="https://personal-portfolio-lac-seven-18.vercel.app/Pages/resume.html" target="_blank" rel="noopener">Resume</a>
+      <a class="resume-btn" href="Resume/resume.html" target="_blank" rel="noopener">Resume</a>
       <button class="menu-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -40,7 +41,7 @@
 
   <section id="home" class="hero">
     <div>
-      <div class="status-chip"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</div>
+      <!-- <div class="status-chip"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</div> -->
       <h1>Suraj Kumar<span class="role">Full-Stack Developer · B.Tech CSE</span></h1>
       <p class="lede">I build responsive, full-stack web applications — from React front ends to Node/Express APIs and the databases behind them. Currently deep in a real-time train ETA forecasting platform as my major project.</p>
       <div class="hero-cta">
@@ -67,7 +68,7 @@
       <div class="photo-frame">
         <!-- Replace the src below with your own photo (e.g. "image/suraj.jpg").
              If the image fails to load or src is left empty, initials show instead. -->
-        <img src="image/suraj.jpg" alt="Photo of Suraj Kumar"
+        <img src="image/suraj.jpeg" alt="Photo of Suraj Kumar"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="avatar-fallback" style="display:none;">SK</div>
       </div>
@@ -78,7 +79,7 @@
           <div class="board-row"><span class="label">Degree</span><span class="val">B.Tech CSE</span></div>
           <div class="board-row"><span class="label">Experience</span><span class="val">Fresher</span></div>
           <div class="board-row"><span class="label">Location</span><span class="val">India</span></div>
-          <div class="board-row"><span class="label">Status</span><span class="val ontime">ON TRACK</span></div>
+          <!-- <div class="board-row"><span class="label">Status</span><span class="val ontime">ON TRACK</span></div> -->
         </div>
       </div>
     </div>
@@ -88,8 +89,10 @@
     <div class="section-head"><span class="num">01</span><h2>About</h2><span class="rule"></span></div>
     <div class="about-grid">
       <div>
-        <p>I'm a Computer Science Engineering student who enjoys turning ideas into working software — from front-end interfaces that feel responsive, to back-end services that hold up under real use. My toolkit spans HTML, CSS and JavaScript through to React, Node.js, Express and MongoDB.</p>
-        <p>Right now I'm building <strong>RailCast</strong>, a real-time platform that forecasts train ETAs using live location data and, eventually, a machine-learning model trained on historical run times — my major project for this year. Outside of that I keep sharpening fundamentals through smaller full-stack builds and API-driven apps.</p>
+
+        <p>Motivated Full Stack Developer with hands-on experience in HTML, CSS, JavaScript, React.js, Node.js, Express.js, SQL, and Git/GitHub. Skilled in building responsive web applications, REST APIs, and database-driven applications. Strong foundation in Data Structures & Algorithms and problem-solving, with multiple practical projects demonstrating frontend and full-stack development skills.</p>
+
+        <p>Seeking a Software Developer / Full Stack Developer Internship where I can apply my technical skills, contribute to real-world projects, strengthen my problem-solving abilities, and grow as a professional software developer.</p>
         <div class="chips">
           <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
           <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express.js</span>
@@ -142,29 +145,14 @@
     </div>
   </section>
 
+  <!-- project -->
   <section id="projects" class="block">
     <div class="section-head"><span class="num">03</span><h2>Projects</h2><span class="rule"></span></div>
     <div class="projects">
 
       <div class="project-card">
         <div class="project-thumb">
-          <!-- Replace with a real screenshot, e.g. "image/railcast.jpg" -->
-          <img src="image/railcast.jpg" alt="RailCast screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="thumb-fallback" style="display:none;">RailCast</div>
-          <span class="project-status progress">In progress</span>
-        </div>
-        <div class="project-body">
-          <div class="pcode">RC-01</div>
-          <h3>RailCast</h3>
-          <p>A real-time train ETA forecasting platform — live tracking on the map, a Socket.IO feed for live updates, and a planned ML service for predicting arrival times from historical run data.</p>
-          <div class="tags"><span>React</span><span>Node.js</span><span>Socket.IO</span><span>PostgreSQL</span></div>
-          <div class="plinks"><span class="muted-link">Build in progress</span></div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb">
-          <img src="image/weather-app.jpg" alt="Weather App screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="image/app.png" alt="Weather App screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="thumb-fallback" style="display:none;">Weather App</div>
           <span class="project-status">Live</span>
         </div>
@@ -182,7 +170,7 @@
 
       <div class="project-card">
         <div class="project-thumb">
-          <img src="image/e-commerce.jpg" alt="E-Commerce Website screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="image/e - commerce.png" alt="E-Commerce Website screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="thumb-fallback" style="display:none;">E-Commerce</div>
           <span class="project-status">Live</span>
         </div>
@@ -200,7 +188,7 @@
 
       <div class="project-card">
         <div class="project-thumb">
-          <img src="image/space-dashboard.jpg" alt="Space Dashboard screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="image/space .png" alt="Space Dashboard screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="thumb-fallback" style="display:none;">Space Dashboard</div>
           <span class="project-status">Live</span>
         </div>
@@ -218,7 +206,7 @@
 
       <div class="project-card">
         <div class="project-thumb">
-          <img src="image/country-explorer.jpg" alt="Country Explorer screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="image/country explorer.png" alt="Country Explorer screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="thumb-fallback" style="display:none;">Country Explorer</div>
           <span class="project-status">Live</span>
         </div>
@@ -236,7 +224,7 @@
 
       <div class="project-card">
         <div class="project-thumb">
-          <img src="image/movie-explorer.jpg" alt="Movie Explorer screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="image/movie.png" alt="Movie Explorer screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="thumb-fallback" style="display:none;">Movie Explorer</div>
           <span class="project-status">Live</span>
         </div>
@@ -254,7 +242,7 @@
 
       <div class="project-card">
         <div class="project-thumb">
-          <img src="image/study-ecosystem.jpg" alt="Student Productivity Ecosystem screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="image/Student Productivity Ecosystem.png" alt="Student Productivity Ecosystem screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="thumb-fallback" style="display:none;">Study Ecosystem</div>
           <span class="project-status">Live</span>
         </div>
@@ -278,7 +266,7 @@
     <div class="contact-grid">
       <div class="contact-form-panel">
         <h3>Send a message</h3>
-        <p class="form-sub">Fill this in and your mail app will open with everything filled out — just hit send.</p>
+        <p class="form-sub">Fill this in and it'll land straight in my inbox — no email app needed.</p>
         <form id="contactForm" novalidate>
           <div class="form-row">
             <label for="cf-name">Name</label>
@@ -329,6 +317,8 @@
   <span>© <span id="year"></span> Suraj Kumar. All rights reserved.</span>
   <span>Built with HTML, CSS &amp; JavaScript.</span>
 </footer>
+
+
 
 </body>
 </html>
